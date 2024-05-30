@@ -1,21 +1,20 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import ToggleBtn from './ToggleBtn';
 import { Link, useLocation } from 'react-router-dom';
 
 const Container = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: ${({ theme }) => theme.body};
-  color: ${({ theme }) => theme.text};
+  background-color:  white;
+  color: black;
   width: 100%;
   max-width: 100vw;
   box-sizing: border-box;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-`;
+`
 
 const Title = styled.h2`
   background-image: linear-gradient(-225deg, rgb(10, 2, 247) 0%, #3584A7 51%, #30D2BE 100%);
@@ -23,7 +22,7 @@ const Title = styled.h2`
   color: transparent;
   font-size: 1.5rem;
   font-weight: bold;
-`;
+`
 
 const Nav = styled.ul`
   display: flex;
@@ -34,17 +33,17 @@ const Nav = styled.ul`
   @media (max-width: 768px) {
     display: none;
   }
-`;
+`
 
 const NavItem = styled.li`
   margin: 0 10px;
-`;
+`
 
 const NavLink = styled(Link)(({ isActive, theme }) => `
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
-  color: ${theme.text};
+  color: black;
   transition: 0.5s;
   position: relative;
   display: inline-block;
@@ -70,23 +69,23 @@ const NavLink = styled(Link)(({ isActive, theme }) => `
       left: 0;
     }
   `}
-`);
+`)
 
 const MobileNavItem = styled.div`
   margin: 10px 0;
-`;
+`
 
 const MobileNavLink = styled(Link)`
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
-  color: ${({ theme }) => theme.text};
+  color: Black;
   transition: 0.5s;
 
   &:hover {
     color: #1e30f3;
   }
-`;
+`
 
 const MenuIcon = styled.div`
   display: none;
@@ -96,7 +95,7 @@ const MenuIcon = styled.div`
   @media (max-width: 768px) {
     display: block;
   }
-`;
+`
 
 const MobileMenu = styled.div(({ show }) => `
   display: flex;
@@ -150,9 +149,7 @@ const Header = ({ toggleTheme, theme }) => {
           <NavLink to="/contato" isActive={isActiveLink('/contato', location.pathname)}>Contato</NavLink>
         </NavItem>
       </Nav>
-      <DesktopToggleBtnContainer>
-        <ToggleBtn theme={theme} toggleTheme={toggleTheme} />
-      </DesktopToggleBtnContainer>
+      
       <MobileMenu show={showMenu}>
         <MobileNavItem>
           <MobileNavLink to="/" onClick={toggleMenu}>Home</MobileNavLink>
@@ -166,10 +163,9 @@ const Header = ({ toggleTheme, theme }) => {
         <MobileNavItem>
           <MobileNavLink to="/contato" onClick={toggleMenu}>Contato</MobileNavLink>
         </MobileNavItem>
-        
       </MobileMenu>
     </Container>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
