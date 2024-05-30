@@ -1,8 +1,9 @@
-
-import React from 'react'
-import styled from 'styled-components'
-import {Link} from 'react-router-dom'
-
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const Container = styled.div`
   display: flex;
@@ -10,16 +11,19 @@ const Container = styled.div`
   align-items: center;
   height: 500px;
   margin-bottom: 50px;
-  margin: 0;
-  padding: 0;
-
-  @media(max-width: 768px){
-    flex-direction: column;
-  }
 `
 
-const Boxes = styled.div`
+const Box = styled.div`
+  width: 300px;
+  height: 400px;
+  border-radius: 20px;
+  padding: 10px;
+`
 
+const TopBox = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 const Title = styled.h1`
@@ -43,36 +47,40 @@ const SubTitle = styled.h3`
     -webkit-background-clip: text;
     color: transparent;
   }
-  @media(max-width: 768px){
-    margin-top: -35px;
-  }
 `
 
-const Img = styled.img`
-  width: 80%;
-  border-radius: 40%;
-  margin:
-`
-
-const ToLink = styled(Link)`
-  text-decoration: none;
-  color: white;
+const Text = styled.div`
   font-weight: bold;
-  font-size: 1rem;
+  text-align: justify;
+  color: #696969;
 `
 
-const Home = () => {
+const Produts = () => {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1
+  };
+
   return (
-    <>
-        
-        <Container>
-        
-
-
-        </Container>
-
-    </>
-  )
+    <Container>
+      <Slider {...settings}>
+        <Box>
+          <TopBox>
+            <Title>Title 1</Title>
+          </TopBox>
+          <SubTitle>
+            Subtitle 1<br />
+            <span><Link to="#">Link 1</Link></span>
+          </SubTitle>
+          <Text>Text 1</Text>
+        </Box>
+        {/* Adicione mais boxes aqui */}
+      </Slider>
+    </Container>
+  );
 }
 
-export default Home
+export default Produts;

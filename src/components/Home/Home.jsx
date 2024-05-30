@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Header from '../Header/Header'
 import {Link} from 'react-router-dom'
+import Produts from './Produts'
 
 
 const Container = styled.div`
@@ -122,9 +123,9 @@ const Home = () => {
           </Btns>
         </LeftContainer>
 
-
+        <Produts/>
         </Container>
-
+    
     </>
   )
 }
