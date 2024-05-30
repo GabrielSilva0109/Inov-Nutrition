@@ -6,8 +6,7 @@ const Container = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color:  white;
-  color: black;
+  background-color: #0c29ab;
   width: 100%;
   max-width: 100vw;
   box-sizing: border-box;
@@ -17,7 +16,7 @@ const Container = styled.div`
 `
 
 const Title = styled.h2`
-  background-image: linear-gradient(-225deg, rgb(10, 2, 247) 0%, #3584A7 51%, #30D2BE 100%);
+    background-image: linear-gradient(-225deg, rgb(255 255 255) 0%, #ddf5ff 51%, #30D2BE 100%);
   -webkit-background-clip: text;
   color: transparent;
   font-size: 1.5rem;
@@ -43,7 +42,7 @@ const NavLink = styled(Link)(({ isActive}) => `
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
-  color: black;
+  color: white;
   transition: 0.5s;
   position: relative;
   display: inline-block;
@@ -86,19 +85,21 @@ const MobileNavLink = styled(Link)`
     color: #1e30f3;
   }
 `
-
 const MenuIcon = styled.div`
   display: none;
   cursor: pointer;
   font-size: 1.5rem;
+  color: white;
 
   @media (max-width: 768px) {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `
 
-const MobileMenu = styled.div(({ show }) => `
-  display: flex;
+const MobileMenu = styled.div`
+  display: none;
   flex-direction: column;
   align-items: center;
   position: absolute;
@@ -106,12 +107,21 @@ const MobileMenu = styled.div(({ show }) => `
   padding: 15px;
   left: 0;
   width: 100%;
-  background-color: white;
+  background-color: #0c29ab;
   z-index: 10;
-  max-height: ${show ? '300px' : '0'};
   overflow: hidden;
-  transition: max-height 0.4s ease-in-out;
-`)
+  transition: all 0.4s ease-in-out;
+
+  ${MenuIcon}:hover & {
+    display: flex;
+  }
+`
+
+const MenuIconWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
 
 const DesktopToggleBtnContainer = styled.div`
   @media (max-width: 768px) {
@@ -131,7 +141,7 @@ const Header = ({ toggleTheme, theme }) => {
 
   return (
     <Container>
-      <Title>Gabriel Silva</Title>
+      <Title>Inov Nutrition</Title>
       <MenuIcon onClick={toggleMenu}>
         ☰
       </MenuIcon>
@@ -143,7 +153,7 @@ const Header = ({ toggleTheme, theme }) => {
           <NavLink to="/sobre" isActive={isActiveLink('/sobre', location.pathname)}>Sobre</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink to="/projetos" isActive={isActiveLink('/projetos', location.pathname)}>Projetos</NavLink>
+          <NavLink to="/projetos" isActive={isActiveLink('/projetos', location.pathname)}>Produtos</NavLink>
         </NavItem>
         <NavItem>
           <NavLink to="/contato" isActive={isActiveLink('/contato', location.pathname)}>Contato</NavLink>
@@ -158,7 +168,7 @@ const Header = ({ toggleTheme, theme }) => {
           <MobileNavLink to="/sobre" onClick={toggleMenu}>Sobre</MobileNavLink>
         </MobileNavItem>
         <MobileNavItem>
-          <MobileNavLink to="/projetos" onClick={toggleMenu}>Projetos</MobileNavLink>
+          <MobileNavLink to="/projetos" onClick={toggleMenu}>Produtos</MobileNavLink>
         </MobileNavItem>
         <MobileNavItem>
           <MobileNavLink to="/contato" onClick={toggleMenu}>Contato</MobileNavLink>
