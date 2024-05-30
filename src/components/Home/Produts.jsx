@@ -1,6 +1,6 @@
+
 import React from 'react'
 import styled from 'styled-components'
-import Header from '../Header/Header'
 import {Link} from 'react-router-dom'
 
 
@@ -18,22 +18,8 @@ const Container = styled.div`
   }
 `
 
-const LeftContainer = styled.div`
-  width: 50%;
-  float: left;
+const Boxes = styled.div`
 
-  @media(max-width: 768px){
-    width: 90%;
-  }
-`
-
-const RightContainer = styled.div`
-  width: 35%;
-  float: right; 
-
-  @media(max-width: 768px){
-    display: none;
-  }
 `
 
 const Title = styled.h1`
@@ -68,35 +54,6 @@ const Img = styled.img`
   margin:
 `
 
-const Btns = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-`
-
-const BtnContato = styled.button`
-  width: 150px;
-  padding: 8px 16px;
-  border-radius: 6px;
-  background: black;
-  border: none;
-`
-
-const BtnCV = styled.a`
-  width: 150px;
-  padding: 8px 16px;
-  border-radius: 6px;
-  background: #d7d7d7;
-  border: none;
-  color: black;
-  font-weight: bold;
-  font-size: 1rem;
-  text-align: center;
-  text-decoration: none; 
-  cursor: pointer; 
-`
-
 const ToLink = styled(Link)`
   text-decoration: none;
   color: white;
@@ -107,20 +64,9 @@ const ToLink = styled(Link)`
 const Home = () => {
   return (
     <>
-        <Header/>
+        
         <Container>
-        <LeftContainer>
-          <Title>Inov Nutrition</Title>
-          <SubTitle>Desenvolvendo o futuro da <span>Suplementação</span>, <span>Saude</span> e <span>Bem estar</span>.</SubTitle>
-          <Btns>
-            <BtnContato>
-              <ToLink to="/contato">Contato</ToLink>
-            </BtnContato>
-            <BtnCV>
-              Curriculo
-            </BtnCV>
-          </Btns>
-        </LeftContainer>
+        
 
 
         </Container>

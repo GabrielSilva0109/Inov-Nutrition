@@ -8,7 +8,6 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background:  #0c29ab;
     color: black;
     font-family: inherit, Arial, Roboto, sans-serif;
     font-weight: 400;

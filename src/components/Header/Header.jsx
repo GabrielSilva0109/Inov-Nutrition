@@ -6,7 +6,6 @@ const Container = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #0c29ab;
   width: 100%;
   max-width: 100vw;
   box-sizing: border-box;
@@ -16,7 +15,7 @@ const Container = styled.div`
 `
 
 const Title = styled.h2`
-  background-image: linear-gradient(-225deg, rgb(255 255 255) 0%, #ddf5ff 51%, #30D2BE 100%);
+  background-image: linear-gradient(-225deg, rgb(10, 2, 247) 0%, #4f46e5 51%, #3584a7 100%);
   -webkit-background-clip: text;
   color: transparent;
   font-size: 1.5rem;
@@ -42,7 +41,7 @@ const NavLink = styled(Link)(({ isActive }) => `
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
-  color: white;
+  color: black;
   transition: 0.5s;
   position: relative;
   display: inline-block;
@@ -95,7 +94,6 @@ const MobileNavLink = styled(Link)`
   font-weight: bold;
   color: white;
   transition: 0.5s;
-
   &:hover {
     color: #1e30f3;
   }
@@ -105,12 +103,14 @@ const MenuIcon = styled.div`
   display: none;
   cursor: pointer;
   font-size: 1.5rem;
-  color: white;
+  
+  color: black;
 
   @media (max-width: 768px) {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: bold;
   }
 `
 
