@@ -39,7 +39,7 @@ const NavItem = styled.li`
   margin: 0 10px;
 `
 
-const NavLink = styled(Link)(({ isActive, theme }) => `
+const NavLink = styled(Link)(({ isActive}) => `
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
