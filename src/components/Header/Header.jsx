@@ -16,7 +16,7 @@ const Container = styled.div`
 `
 
 const Title = styled.h2`
-    background-image: linear-gradient(-225deg, rgb(255 255 255) 0%, #ddf5ff 51%, #30D2BE 100%);
+  background-image: linear-gradient(-225deg, rgb(255 255 255) 0%, #ddf5ff 51%, #30D2BE 100%);
   -webkit-background-clip: text;
   color: transparent;
   font-size: 1.5rem;
@@ -38,7 +38,7 @@ const NavItem = styled.li`
   margin: 0 10px;
 `
 
-const NavLink = styled(Link)(({ isActive}) => `
+const NavLink = styled(Link)(({ isActive }) => `
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
@@ -70,34 +70,6 @@ const NavLink = styled(Link)(({ isActive}) => `
   `}
 `)
 
-const MobileNavItem = styled.div`
-  margin: 10px 0;
-`
-
-const MobileNavLink = styled(Link)`
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: Black;
-  transition: 0.5s;
-
-  &:hover {
-    color: #1e30f3;
-  }
-`
-const MenuIcon = styled.div`
-  display: none;
-  cursor: pointer;
-  font-size: 1.5rem;
-  color: white;
-
-  @media (max-width: 768px) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-`
-
 const MobileMenu = styled.div`
   display: none;
   flex-direction: column;
@@ -111,21 +83,34 @@ const MobileMenu = styled.div`
   z-index: 10;
   overflow: hidden;
   transition: all 0.4s ease-in-out;
+`
 
-  ${MenuIcon}:hover & {
-    display: flex;
+const MobileNavItem = styled.div`
+  margin: 10px 0;
+`
+
+const MobileNavLink = styled(Link)`
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  transition: 0.5s;
+
+  &:hover {
+    color: #1e30f3;
   }
 `
 
-const MenuIconWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`
+const MenuIcon = styled.div`
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: white;
 
-const DesktopToggleBtnContainer = styled.div`
   @media (max-width: 768px) {
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `
 
@@ -133,7 +118,7 @@ const Header = ({ toggleTheme, theme }) => {
   const [showMenu, setShowMenu] = useState(false)
   const location = useLocation()
 
-  const isActiveLink = (pathname, currentPath) => pathname === currentPath
+  const isActiveLink = (pathname) => pathname === location.pathname
 
   const toggleMenu = () => {
     setShowMenu(!showMenu)
@@ -142,25 +127,24 @@ const Header = ({ toggleTheme, theme }) => {
   return (
     <Container>
       <Title>Inov Nutrition</Title>
-      <MenuIcon onClick={toggleMenu}>
+      <MenuIcon onClick={toggleMenu} aria-label="Toggle Menu">
         ☰
       </MenuIcon>
       <Nav>
         <NavItem>
-          <NavLink to="/" isActive={isActiveLink('/', location.pathname)}>Home</NavLink>
+          <NavLink to="/" isActive={isActiveLink('/')}>Home</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink to="/sobre" isActive={isActiveLink('/sobre', location.pathname)}>Sobre</NavLink>
+          <NavLink to="/sobre" isActive={isActiveLink('/sobre')}>Sobre</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink to="/projetos" isActive={isActiveLink('/projetos', location.pathname)}>Produtos</NavLink>
+          <NavLink to="/projetos" isActive={isActiveLink('/projetos')}>Produtos</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink to="/contato" isActive={isActiveLink('/contato', location.pathname)}>Contato</NavLink>
+          <NavLink to="/contato" isActive={isActiveLink('/contato')}>Contato</NavLink>
         </NavItem>
       </Nav>
-      
-      <MobileMenu show={showMenu}>
+      <MobileMenu style={{ display: showMenu ? 'flex' : 'none' }}>
         <MobileNavItem>
           <MobileNavLink to="/" onClick={toggleMenu}>Home</MobileNavLink>
         </MobileNavItem>

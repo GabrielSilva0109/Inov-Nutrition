@@ -6,7 +6,7 @@ const Container = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #0c29ab;
+  background-color: white;
   width: 100%;
   max-width: 100vw;
   box-sizing: border-box;
@@ -20,9 +20,8 @@ const Home = () => {
     <>
         <Header/>
         <Container>
-          
-fgma
 
+as
         </Container>
 
     </>
