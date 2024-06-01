@@ -138,7 +138,7 @@ const Header = ({ toggleTheme, theme }) => {
           <NavLink to="/sobre" isActive={isActiveLink('/sobre')}>Sobre</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink to="/projetos" isActive={isActiveLink('/projetos')}>Produtos</NavLink>
+          <NavLink to="/produtos" isActive={isActiveLink('/projetos')}>Produtos</NavLink>
         </NavItem>
         <NavItem>
           <NavLink to="/contato" isActive={isActiveLink('/contato')}>Contato</NavLink>
@@ -152,7 +152,7 @@ const Header = ({ toggleTheme, theme }) => {
           <MobileNavLink to="/sobre" onClick={toggleMenu}>Sobre</MobileNavLink>
         </MobileNavItem>
         <MobileNavItem>
-          <MobileNavLink to="/projetos" onClick={toggleMenu}>Produtos</MobileNavLink>
+          <MobileNavLink to="/produtos" onClick={toggleMenu}>Produtos</MobileNavLink>
         </MobileNavItem>
         <MobileNavItem>
           <MobileNavLink to="/contato" onClick={toggleMenu}>Contato</MobileNavLink>
