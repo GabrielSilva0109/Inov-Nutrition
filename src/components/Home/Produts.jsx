@@ -9,14 +9,12 @@ const Container = styled.div`
   width: 80%;
   margin: 0 auto;
   padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
+  
+`
 
 const Main = styled.div`
   overflow: hidden;
-`;
+`
 
 const Box = styled.div`
   color: #333;
@@ -26,7 +24,7 @@ const Box = styled.div`
   height: 300px;
   text-align: center;
   flex-shrink: 0;
-`;
+`
 
 const Title = styled.h1`
   font-size: 1.8rem;
@@ -34,7 +32,7 @@ const Title = styled.h1`
   -webkit-background-clip: text;
   color: transparent;
   margin-bottom: 10px;
-`;
+`
 
 const SubTitle = styled.h3`
   font-size: 1.2rem;
@@ -50,25 +48,58 @@ const SubTitle = styled.h3`
     text-decoration: none;
     color: inherit;
   }
-`;
+`
 
 const Text = styled.div`
+  color: gray;
   font-size: 1rem;
-`;
+  font-weight: bold;
+  text-align: justify;
+`
 
 const Products = () => {
   const sliderRef = useRef(null);
   const [currentPage, setCurrentPage] = useState(0);
 
   const boxes = [
-    { title: 'Proteinas', subtitle: 'Subtitle 1', linkText: 'Link 1', text: 'Text 1' },
-    { title: 'Aminoacidos', subtitle: 'Subtitle 2', linkText: 'Link 2', text: 'Text 2' },
-    { title: 'Termogenicos', subtitle: 'Subtitle 3', linkText: 'Link 3', text: 'Text 3' },
-    { title: 'Vitaminas', subtitle: 'Subtitle 1', linkText: 'Link 1', text: 'Text 1' },
-    { title: 'Fitoterapiticos', subtitle: 'Subtitle 2', linkText: 'Link 2', text: 'Text 2' },
-    { title: 'Colagenos', subtitle: 'Subtitle 3', linkText: 'Link 3', text: 'Text 3' },
-  ];
-
+    { 
+      title: 'Proteinas', 
+      subtitle: 'Aumente seus músculos', 
+      linkText: 'Saiba mais', 
+      text: 'As proteínas são essenciais para o crescimento muscular e a recuperação após o exercício. Descubra nossas opções de proteínas de alta qualidade para alcançar seus objetivos de fitness.' 
+    },
+    { 
+      title: 'Aminoacidos', 
+      subtitle: 'Melhore seu desempenho', 
+      linkText: 'Confira agora', 
+      text: 'Os aminoácidos são os blocos de construção dos músculos. Descubra nossas opções de aminoácidos essenciais e melhore seu desempenho atlético.' 
+    },
+    { 
+      title: 'Termogenicos', 
+      subtitle: 'Queime gordura mais rápido', 
+      linkText: 'Veja nossas opções', 
+      text: 'Os termogênicos aumentam a taxa metabólica e ajudam a queimar gordura mais rapidamente. Explore nossa seleção de termogênicos para alcançar seus objetivos de perda de peso.' 
+    },
+    { 
+      title: 'Vitaminas', 
+      subtitle: 'Mantenha-se saudável', 
+      linkText: 'Descubra mais', 
+      text: 'As vitaminas desempenham um papel crucial na manutenção da saúde. Conheça nossas opções de vitaminas para fortalecer seu sistema imunológico e melhorar sua saúde geral.' 
+    },
+    { 
+      title: 'Fitoterapiticos', 
+      subtitle: 'Remédios naturais', 
+      linkText: 'Conheça nossas opções', 
+      text: 'Os fitoterápicos oferecem uma abordagem natural para tratar uma variedade de condições de saúde. Descubra nossas opções de fitoterápicos para uma vida mais saudável.' 
+    },
+    { 
+      title: 'Colagenos', 
+      subtitle: 'Pele jovem e saudável', 
+      linkText: 'Saiba mais aqui', 
+      text: 'O colágeno é essencial para a saúde da pele, cabelos e unhas. Explore nossas opções de colágeno para uma aparência jovem e uma pele saudável.' 
+    },
+  ]
+  
   useEffect(() => {
     const interval = setInterval(() => {
       sliderRef.current.slickNext();
@@ -101,7 +132,7 @@ const Products = () => {
 
   const handleNext = () => {
     sliderRef.current.slickNext();
-  };
+  }
 
   return (
     <Container>
@@ -112,15 +143,16 @@ const Products = () => {
               <Title>{box.title}</Title>
               <SubTitle>
                 {box.subtitle}<br />
-                <span><Link to="#">{box.linkText}</Link></span>
+                
               </SubTitle>
               <Text>{box.text}</Text>
+              
             </Box>
           ))}
         </Slider>
       </Main>
     </Container>
-  );
-};
+  )
+}
 
-export default Products;
+export default Products
