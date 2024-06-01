@@ -1,9 +1,11 @@
 import React from 'react'
-import styled from 'styled-components'
-import Header from '../Header/Header'
-import {Link} from 'react-router-dom'
+import styled from 'styled-components';
+import { Link } from 'react-router-dom'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 import Produts from './Produts'
-
+import Header from '../Header/Header'
 
 const Container = styled.div`
   display: flex;
@@ -123,9 +125,9 @@ const Home = () => {
           </Btns>
         </LeftContainer>
 
-        <Produts/>
+        
         </Container>
-    
+        <Produts/>
     </>
   )
 }
