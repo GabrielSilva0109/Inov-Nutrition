@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import Footer from '../Footer/Footer'
 
 const Container = styled.div`
   width: 80%;
@@ -134,6 +135,7 @@ const Products = () => {
   }
 
   return (
+    <>
     <Container>
       <Main>
         <Slider {...settings} ref={sliderRef}>
@@ -151,6 +153,8 @@ const Products = () => {
         </Slider>
       </Main>
     </Container>
+     <Footer />
+     </>
   )
 }
 
