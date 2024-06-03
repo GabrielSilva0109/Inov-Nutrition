@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Footer from '../Footer/Footer'
 
 import health from '../../Img/healthy.png'
+import Topics from './Topics'
 
 const Container = styled.div`
     display: flex;
@@ -32,13 +33,16 @@ const Right = styled.div`
 `
 
 const Title = styled.h1`
-    font-size: 2rem;
+    font-size: 2.5rem;
+    background-image: linear-gradient(-225deg, rgb(255 255 255) 0%, #fffb7c 51%, #d1d51e 100%);
+    -webkit-background-clip: text;
+    color: transparent;
 `
 
 const Text = styled.h3`
     font-size: 1.1rem;
     text-align: justify;
-    color: gray;
+    color: #dbdbd;
     padding: 0px 40px;
 
     @media(max-width: 768px){
@@ -50,11 +54,13 @@ const Img = styled.img`
     width: 100%;
 `
 
-
 const Topicos = styled.div`
     display: flex;
+    align-items: center;
     justify-content: center;
+    
     margin-top: 20px;
+    width: 80%;
     gap: 10px;
 
     @media(max-width: 768px){
@@ -64,9 +70,10 @@ const Topicos = styled.div`
 `
 
 const Topico = styled.div`
-    width: 250px;
+    width: 35%;
     height: 250px;
-    background-color: lightgray;
+    border: 2px solid white;
+    border-radius: 20px;
 
     @media(max-width: 768px){
         width: 80%;
@@ -79,8 +86,6 @@ const About = () => {
     <>
         <Header/>
         <Container>
-            
-          
             <Left>
                 <Title>
                     Transformando sua Performance e saude.
@@ -89,28 +94,15 @@ const About = () => {
                     a sua excelência pessoal. Nossos produtos são cuidadosamente elaborados para impulsionar sua 
                     jornada de saúde e desempenho, refletindo nosso compromisso com a inovação e qualidade. 
                     Junte-se a nós e experimente a diferença de uma abordagem que valoriza sua saúde em primeiro lugar.</Text>
-            
-
             </Left>
             <Right>
                 <Img src={health}/>
 
             </Right>
-        </Container>
-          
-        <Topicos>
-            <Topico></Topico>
-            <Topico></Topico>
-            <Topico></Topico>
             
-        </Topicos>
-        <Topicos>
-            <Topico></Topico>
-            <Topico></Topico>
-            <Topico></Topico>
-        </Topicos>
+        </Container>
+        <Topics />
         <Footer />
-        
     </>
   )
 }
