@@ -17,7 +17,7 @@ const Section = styled.div`
 
 const Title = styled.h1`
     font-size: 1rem;
-    color: white;
+    color: #ffff59;
 
     @media(max-width: 768px){
         font-size: 1.3rem;
@@ -27,7 +27,7 @@ const Title = styled.h1`
 const Text = styled.h3`
     font-size: 0.75rem;
     text-align: justify;
-    color: lightgrey;
+    color: white;
     @media(max-width: 768px){
         font-size: 0.8rem;
     }
@@ -55,7 +55,6 @@ const Topicos = styled.div`
 const Topico = styled.div`
     width: 30%;
     height: 250px;
-    border: 2px solid white;
     border-radius: 20px;
     margin: 10px;
     padding: 10px;
@@ -66,7 +65,6 @@ const Topico = styled.div`
         height: 270px;
     }
 `
-
 
 const Topics = () => {
   return (
@@ -119,12 +117,12 @@ const Topics = () => {
                 </Topico>
 
                 <Topico>
-                    <Img />
-                    <Title></Title>
-                    <Text></Text>
+                    <Img src={burn}/>
+                    <Title>Suplementos Potentes para Emagrecimento</Title>
+                    <Text>Alcance seus objetivos de peso com nossos suplementos potentes,
+                         formulados para impulsionar o metabolismo e queimar gordura de forma eficaz.</Text>
                 </Topico>
             </Topicos>
-              
     </Section>
     </>
   )

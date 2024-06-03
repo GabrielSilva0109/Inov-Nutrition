@@ -110,7 +110,6 @@ const About = () => {
                 <Img src={health}/>
 
             </Right>
-            
         </Container>
         <Topics />
         <Footer />

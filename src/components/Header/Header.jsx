@@ -139,7 +139,7 @@ const Header = ({ toggleTheme, theme }) => {
           <NavLink to="/sobre" isActive={isActiveLink('/sobre')}>Sobre</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink to="/produtos" isActive={isActiveLink('/projetos')}>Produtos</NavLink>
+          <NavLink to="/produtos" isActive={isActiveLink('/produtos')}>Produtos</NavLink>
         </NavItem>
         <NavItem>
           <NavLink to="/contato" isActive={isActiveLink('/contato')}>Contato</NavLink>
