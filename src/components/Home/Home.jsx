@@ -7,6 +7,13 @@ import 'slick-carousel/slick/slick-theme.css'
 import Produts from './Produts'
 import Header from '../Header/Header'
 
+import whats from '../../Img/Icons/whatsapp.png'
+import insta from '../../Img/Icons/insta.png'
+import telegram  from '../../Img/Icons/telegram.png'
+import carrinho from '../../Img/Icons/carrinho.png'
+import meta from '../../Img/Icons/meta.png'
+
+
 const Container = styled.div`
   display: flex;
   justify-content: center;
@@ -71,6 +78,16 @@ const Img = styled.img`
   margin:
 `
 
+const ImgIcon = styled.img`
+  width: 45px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  
+  &:hover {
+    transform: rotate(360deg); 
+  }
+`
+
 const Btns = styled.div`
   display: flex;
   align-items: center;
@@ -78,34 +95,15 @@ const Btns = styled.div`
   gap: 10px;
 `
 
-const BtnContato = styled.button`
-  width: 150px;
-  padding: 8px 16px;
-  border-radius: 6px;
-  background: black;
+const Icon = styled.div`
+  padding: 16px;
+  border-radius: 50%;
   border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 
-const BtnCV = styled.a`
-  width: 150px;
-  padding: 8px 16px;
-  border-radius: 6px;
-  background: #d7d7d7;
-  border: none;
-  color: black;
-  font-weight: bold;
-  font-size: 1rem;
-  text-align: center;
-  text-decoration: none; 
-  cursor: pointer; 
-`
-
-const ToLink = styled(Link)`
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  font-size: 1rem;
-`
 
 const Home = () => {
   return (
@@ -116,12 +114,21 @@ const Home = () => {
           <Title>Inov Nutrition</Title>
           <SubTitle>Desenvolvendo o futuro da <span>Suplementação</span>, <span>Saude</span> e <span>Bem estar</span>.</SubTitle>
           <Btns>
-            <BtnContato>
-              <ToLink to="/contato">Contato</ToLink>
-            </BtnContato>
-            <BtnCV>
-              Curriculo
-            </BtnCV>
+            <Icon>
+              <ImgIcon src={whats}/>
+            </Icon>
+            <Icon>
+              <ImgIcon src={telegram}/>
+            </Icon>
+            <Icon>
+              <ImgIcon src={insta}/>
+            </Icon>
+            <Icon>
+              <ImgIcon src={meta}/>
+            </Icon>
+            <Icon>
+              <ImgIcon src={carrinho}/>
+            </Icon>
           </Btns>
         </LeftContainer>
 
