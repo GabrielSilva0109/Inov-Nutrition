@@ -15,9 +15,7 @@ const Container = styled.div`
 `
 
 const Title = styled.h2`
-  background-image: linear-gradient(-225deg, rgb(10, 2, 247) 0%, #4f46e5 51%, #3584a7 100%);
-  -webkit-background-clip: text;
-  color: transparent;
+  color: white;
   font-size: 1.5rem;
   font-weight: bold;
 `
@@ -41,7 +39,7 @@ const NavLink = styled(Link)(({ isActive }) => `
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
-  color: black;
+  color: white;
   transition: 0.5s;
   position: relative;
   display: inline-block;
@@ -70,18 +68,22 @@ const NavLink = styled(Link)(({ isActive }) => `
 `)
 
 const MobileMenu = styled.div`
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  top: 60px;
-  padding: 15px;
-  left: 0;
-  width: 100%;
-  background-color: #0c29ab;
-  z-index: 10;
-  overflow: hidden;
-  transition: all 0.4s ease-in-out;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    padding: 15px;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff42;
+    z-index: 10;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    color: white;
+    backdrop-filter: blur(5px);
 `
 
 const MobileNavItem = styled.div`
@@ -103,8 +105,7 @@ const MenuIcon = styled.div`
   display: none;
   cursor: pointer;
   font-size: 1.5rem;
-  
-  color: black;
+  color: white;
 
   @media (max-width: 768px) {
     display: flex;

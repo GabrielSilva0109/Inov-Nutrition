@@ -47,7 +47,7 @@ const RightContainer = styled.div`
 `
 
 const Title = styled.h1`
-  background-image: linear-gradient(-225deg, rgb(10, 2, 247) 0%, #3584A7 51%, #30D2BE 100%);
+  background-image: linear-gradient(-225deg, rgb(255 255 255) 0%, #fffb7c 51%, #ffffff 100%);
   -webkit-background-clip: text;
   color: transparent;
   font-size: 5rem;
