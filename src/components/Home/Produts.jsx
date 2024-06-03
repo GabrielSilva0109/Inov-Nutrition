@@ -17,7 +17,7 @@ const Main = styled.div`
 `
 
 const Box = styled.div`
-  color: #333;
+  color: white;
   border-radius: 10px;
   padding: 20px;
   width: 300px;
@@ -28,9 +28,9 @@ const Box = styled.div`
 
 const Title = styled.h1`
   font-size: 1.8rem;
-  background: linear-gradient(-225deg, rgb(10, 2, 247) 0%, #3584A7 51%, #30D2BE 100%);
+  // background-image: linear-gradient(-225deg, rgb(255 255 255) 0%, #fffb7c 51%, #ffffff 100%);
   -webkit-background-clip: text;
-  color: transparent;
+  color: yellow;
   margin-bottom: 10px;
 `
 
@@ -51,7 +51,7 @@ const SubTitle = styled.h3`
 `
 
 const Text = styled.div`
-  color: gray;
+  color: #dbdbdb;
   font-size: 1rem;
   font-weight: bold;
   text-align: justify;

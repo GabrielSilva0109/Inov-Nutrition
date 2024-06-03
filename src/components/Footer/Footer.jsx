@@ -5,41 +5,38 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
 `
 
 const Text = styled.p`
   font-size: 0.85rem;
   font-weight: 600;
-  color: black;
+  color: white;
 `
 
 const Company = styled.p`
   font-size: 1rem;
   font-weight: bold;
-  background-image: linear-gradient(-225deg, rgb(10, 2, 247) 0%, #3584A7 51%, #30D2BE 100%);
-  -webkit-background-clip: text;
-  color: transparent;
-
+  color: yellow;
 `
 
 const Dev = styled.p`
   font-size: 1rem;
   font-weight: bold;
-  color: black;
+  color: #ededed;
   cursor: pointer;
   transition: 1s;
 
   &:hover{
-    color: gray;
+    color: white;
   }
 `
+
 const Footer = () => {
   return (
         <Container>
           <Text>©CopyRight</Text>
           <Company>Inovi Nutrition</Company>
-          <span>|</span>
           <Dev>@Gabriel Silva</Dev>
         </Container>    
   )
