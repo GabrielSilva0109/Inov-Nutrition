@@ -53,6 +53,9 @@ const Title = styled.h1`
   font-size: 5rem;
   font-weight: bold;
   font-family: inherit;
+  @media(max-width: 768px ){
+    font-size: 4rem;
+  }
 `
 
 const SubTitle = styled.h3`
@@ -93,6 +96,10 @@ const Btns = styled.div`
   align-items: center;
   justify-content: center;
   gap: 10px;
+
+  @media(max-width: 768px ){
+    gap: 0px;
+  }
 `
 
 const Icon = styled.div`
