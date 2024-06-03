@@ -16,6 +16,16 @@ const Container = styled.div`
     }
 `
 
+const Container2 = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    @media(max-width: 768px){
+    }
+`
+
 const Left = styled.div`
     width: 40%;
 
@@ -58,9 +68,10 @@ const Topicos = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     
     margin-top: 20px;
-    width: 80%;
+    width: 70%;
     gap: 10px;
 
     @media(max-width: 768px){
