@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import Header from '../Header/Header'
 import Proteina from './Proteina'
 import Termogenico from './Termogenico'
 import Aminoacidos from './Aminoacido'
 import PreTreino from './PreTreino'
-import Fitoterapticos from './Fitoterapticos'
+import Fitoterapticos from './Fitoterapiticos'
 import Colageno from './Colageno'
 
 const Container = styled.div`
@@ -23,15 +23,23 @@ const Nav = styled.nav`
 `
 
 const NavLink = styled.a`
-    color: #333;
+    color: white;
     text-decoration: none;
     margin-right: 20px;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
+    transition: 1s;
 
-    &:hover {
-        text-decoration: underline;
-    }
+
+    ${(props) =>
+        props.active &&
+        css`
+            color: black;
+            background: white;
+            padding: 10px;
+            border-radius: 20px;
+        `}
 `
 
 const Products = () => {
@@ -46,12 +54,42 @@ const Products = () => {
             <Header/>
             <Container>
                 <Nav>
-                    <NavLink onClick={() => handleCategoryClick('Proteina')}>Proteínas</NavLink>
-                    <NavLink onClick={() => handleCategoryClick('Aminoacidos')}>Aminoácidos</NavLink>
-                    <NavLink onClick={() => handleCategoryClick('Termogenico')}>Termogênicos</NavLink>
-                    <NavLink onClick={() => handleCategoryClick('PreTreino')}>Pré Treino</NavLink>
-                    <NavLink onClick={() => handleCategoryClick('Fitoterapticos')}>Fitoterápicos</NavLink>
-                    <NavLink onClick={() => handleCategoryClick('Colageno')}>Colágeno</NavLink> 
+                    <NavLink 
+                        onClick={() => handleCategoryClick('Proteina')}
+                        active={activeCategory === 'Proteina'}
+                    >
+                        Proteínas
+                    </NavLink>
+                    <NavLink 
+                        onClick={() => handleCategoryClick('Aminoacidos')}
+                        active={activeCategory === 'Aminoacidos'}
+                    >
+                        Aminoácidos
+                    </NavLink>
+                    <NavLink 
+                        onClick={() => handleCategoryClick('Termogenico')}
+                        active={activeCategory === 'Termogenico'}
+                    >
+                        Termogênicos
+                    </NavLink>
+                    <NavLink 
+                        onClick={() => handleCategoryClick('PreTreino')}
+                        active={activeCategory === 'PreTreino'}
+                    >
+                        Pré Treino
+                    </NavLink>
+                    <NavLink 
+                        onClick={() => handleCategoryClick('Fitoterapticos')}
+                        active={activeCategory === 'Fitoterapticos'}
+                    >
+                        Fitoterápicos
+                    </NavLink>
+                    <NavLink 
+                        onClick={() => handleCategoryClick('Colageno')}
+                        active={activeCategory === 'Colageno'}
+                    >
+                        Colágeno
+                    </NavLink> 
                 </Nav>
 
                 
