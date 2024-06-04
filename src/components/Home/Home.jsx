@@ -111,35 +111,32 @@ const Icon = styled.div`
   justify-content: center;
 `
 
-
 const Home = () => {
   return (
     <>
         <Header/>
         <Container>
-        <LeftContainer>
-          <Title>Inov Nutrition</Title>
-          <SubTitle>Desenvolvendo o futuro da <span>Suplementação</span>, <span>Saude</span> e <span>Bem estar</span>.</SubTitle>
-          <Btns>
-            <Icon>
-              <ImgIcon src={whats}/>
-            </Icon>
-            <Icon>
-              <ImgIcon src={telegram}/>
-            </Icon>
-            <Icon>
-              <ImgIcon src={insta}/>
-            </Icon>
-            <Icon>
-              <ImgIcon src={meta}/>
-            </Icon>
-            <Icon>
-              <ImgIcon src={carrinho}/>
-            </Icon>
-          </Btns>
-        </LeftContainer>
-
-        
+          <LeftContainer>
+            <Title>Inov Nutrition</Title>
+            <SubTitle>Desenvolvendo o futuro da <span>Suplementação</span>, <span>Saude</span> e <span>Bem estar</span>.</SubTitle>
+            <Btns>
+              <Icon>
+                <ImgIcon src={whats}/>
+              </Icon>
+              <Icon>
+                <ImgIcon src={telegram}/>
+              </Icon>
+              <Icon>
+                <ImgIcon src={insta}/>
+              </Icon>
+              <Icon>
+                <ImgIcon src={meta}/>
+              </Icon>
+              <Icon>
+                <ImgIcon src={carrinho}/>
+              </Icon>
+            </Btns>
+          </LeftContainer>
         </Container>
         <Produts/>
     </>
