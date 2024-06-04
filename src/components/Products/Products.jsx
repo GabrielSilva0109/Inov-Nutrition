@@ -20,6 +20,11 @@ const Nav = styled.nav`
     padding: 20px;
     border-radius: 40px;
     border: 2px solid white;
+
+    @media(max-width: 768px){
+        padding: 0;
+        margin-right: 0px;
+    }
 `
 
 const NavLink = styled.a`
@@ -31,6 +36,11 @@ const NavLink = styled.a`
     cursor: pointer;
     transition: 1s;
 
+    @media(max-width: 768px){
+        font-size: 14px;
+        margin-right: 10px;
+    }
+
 
     ${(props) =>
         props.active &&
@@ -39,8 +49,13 @@ const NavLink = styled.a`
             background: white;
             padding: 15px;
             border-radius: 40px;
+            @media(max-width: 768px){
+                padding: 0;
+            }
             
         `}
+
+        
 `
 
 const Products = () => {
