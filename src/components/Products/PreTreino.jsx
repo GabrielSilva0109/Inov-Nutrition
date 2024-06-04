@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import wChoc from '../../Img/Produts/3wChoc.png'
 
 const Container = styled.div`
     display: flex;
@@ -47,34 +46,27 @@ const Img = styled.img`
     width: 400px;
 `
 
-const Proteina = () => {
+const PreTreino = () => {
   return (
     <>
     <Container>
       <Left>
-        <Title>Whey 3W</Title>
-        <Text>whey sei la oq </Text>
+        <Title>Grenade</Title>
+        <Text>Pré Treino</Text>
       </Left>
       <Right>
-        <Img src={wChoc}/>
+        <Img />
       </Right>
       
     </Container>
     <Container>
       <Right>
-        <Img src={wChoc}/>
-      </Right>
-
-      <Left>
-        <Title>Whey 3W</Title>
-        <Text>whey sei la oq </Text>
-      </Left>
-      
-      
+        <Img />
+      </Right>      
     </Container>
 
     </>
   )
 }
 
-export default Proteina
+export default PreTreino

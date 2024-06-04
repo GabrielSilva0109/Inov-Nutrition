@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import Header from '../Header/Header';
-import Proteina from './Proteina';
-import Termogenico from './Termogenico';
-import Aminoacidos from './Aminoacido';
+import React, { useState } from 'react'
+import styled from 'styled-components'
+import Header from '../Header/Header'
+import Proteina from './Proteina'
+import Termogenico from './Termogenico'
+import Aminoacidos from './Aminoacido'
 // import PreTreino from './PreTreino';
 // import Fitoterapticos from './Fitoterapticos';
 // import Colageno from './Colageno';
@@ -49,9 +49,9 @@ const Products = () => {
                     <NavLink onClick={() => handleCategoryClick('Proteina')}>Proteínas</NavLink>
                     <NavLink onClick={() => handleCategoryClick('Aminoacidos')}>Aminoácidos</NavLink>
                     <NavLink onClick={() => handleCategoryClick('Termogenico')}>Termogênicos</NavLink>
-                    {/* <NavLink onClick={() => handleCategoryClick('PreTreino')}>Pré Treino</NavLink>
+                    <NavLink onClick={() => handleCategoryClick('PreTreino')}>Pré Treino</NavLink>
                     <NavLink onClick={() => handleCategoryClick('Fitoterapticos')}>Fitoterápicos</NavLink>
-                    <NavLink onClick={() => handleCategoryClick('Colageno')}>Colágeno</NavLink> */}
+                    <NavLink onClick={() => handleCategoryClick('Colageno')}>Colágeno</NavLink> 
                 </Nav>
 
                 
