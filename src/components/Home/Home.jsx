@@ -39,8 +39,7 @@ const LeftContainer = styled.div`
 
 const RightContainer = styled.div`
   width: 35%;
-  float: right; 
-
+  float: right;
   @media(max-width: 768px){
     display: none;
   }
