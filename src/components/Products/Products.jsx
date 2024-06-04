@@ -4,9 +4,9 @@ import Header from '../Header/Header'
 import Proteina from './Proteina'
 import Termogenico from './Termogenico'
 import Aminoacidos from './Aminoacido'
-// import PreTreino from './PreTreino';
-// import Fitoterapticos from './Fitoterapticos';
-// import Colageno from './Colageno';
+import PreTreino from './PreTreino'
+import Fitoterapticos from './Fitoterapticos'
+import Colageno from './Colageno'
 
 const Container = styled.div`
     display: flex;
@@ -58,12 +58,12 @@ const Products = () => {
                 {activeCategory === 'Proteina' && <Proteina />}
                 {activeCategory === 'Aminoacidos' && <Aminoacidos />}
                 {activeCategory === 'Termogenico' && <Termogenico />}
-                {/* {activeCategory === 'PreTreino' && <PreTreino />}
+                {activeCategory === 'PreTreino' && <PreTreino />}
                 {activeCategory === 'Fitoterapticos' && <Fitoterapticos />}
-                {activeCategory === 'Colageno' && <Colageno />} */}
+                {activeCategory === 'Colageno' && <Colageno />} 
             </Container>
         </>
-    );
-};
+    )
+}
 
-export default Products;
+export default Products
