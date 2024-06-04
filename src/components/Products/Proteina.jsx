@@ -8,6 +8,11 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     height: 400px;
+    @media(max-width: 768px){
+      flex-direction: column;
+      height: auto;
+      
+  }
 `
 
 const Left = styled.div`
@@ -15,6 +20,7 @@ const Left = styled.div`
 
     @media(max-width: 768px){
         width: 80%;
+        
     }
 `
 
