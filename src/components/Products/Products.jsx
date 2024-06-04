@@ -37,16 +37,17 @@ const NavLink = styled.a`
         css`
             color: black;
             background: white;
-            padding: 10px;
-            border-radius: 20px;
+            padding: 15px;
+            border-radius: 40px;
+            
         `}
 `
 
 const Products = () => {
-    const [activeCategory, setActiveCategory] = useState('Proteina');
+    const [activeCategory, setActiveCategory] = useState('Proteina')
 
     const handleCategoryClick = (category) => {
-        setActiveCategory(category);
+        setActiveCategory(category)
     }
 
     return (
