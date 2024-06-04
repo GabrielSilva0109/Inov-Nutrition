@@ -52,7 +52,7 @@ const Title = styled.h1`
   color: transparent;
   font-size: 5rem;
   font-weight: bold;
-  font-family: inherit;
+  font-family:  inherit;
   @media(max-width: 768px ){
     font-size: 4rem;
   }
