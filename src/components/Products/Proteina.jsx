@@ -20,7 +20,6 @@ const Left = styled.div`
 
 const Right = styled.div`
     width: 50%;
- 
     @media(max-width: 768px){
         width: 80%;
     }
@@ -47,7 +46,6 @@ const Text = styled.h3`
 const Img = styled.img`
     width: 400px;
 `
-
 
 const Proteina = () => {
   return (
