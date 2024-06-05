@@ -101,7 +101,7 @@ const Btns = styled.div`
 `
 
 const Icon = styled.div`
-  padding: 16px;
+  padding: 12px;
   border-radius: 50%;
   border: none;
   display: flex;

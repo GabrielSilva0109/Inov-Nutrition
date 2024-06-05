@@ -47,6 +47,10 @@ const Title = styled.h1`
     background-image: linear-gradient(-225deg, rgb(255 255 255) 0%, #fffb7c 51%, #d1d51e 100%);
     -webkit-background-clip: text;
     color: transparent;
+
+    @media(max-width: 768px){
+        font-size: 2rem;
+    }
 `
 
 const Text = styled.h3`
