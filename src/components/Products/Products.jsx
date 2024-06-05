@@ -22,7 +22,7 @@ const Nav = styled.nav`
     border: 2px solid white;
 
     @media(max-width: 768px){
-        padding: 0;
+        padding: 3px;
         margin-right: 0px;
     }
 `
@@ -39,6 +39,7 @@ const NavLink = styled.a`
     @media(max-width: 768px){
         font-size: 14px;
         margin-right: 10px;
+        padding: 3px;
     }
 
 
