@@ -82,7 +82,7 @@ const MobileMenu = styled.div`
     border-radius: 20px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra suave */
     color: white;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(25px);
     background: #a5a5a570;
 `
 
