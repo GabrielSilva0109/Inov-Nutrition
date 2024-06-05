@@ -14,7 +14,7 @@ import carrinho from '../../Img/Icons/carrinho.png'
 import meta from '../../Img/Icons/meta.png'
 
 
-const Container = styled.div`
+export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +27,7 @@ const Container = styled.div`
   }
 `
 
-const LeftContainer = styled.div`
+export const LeftContainer = styled.div`
   width: 50%;
   float: left;
 
@@ -36,7 +36,7 @@ const LeftContainer = styled.div`
   }
 `
 
-const RightContainer = styled.div`
+export const RightContainer = styled.div`
   width: 35%;
   float: right;
   @media(max-width: 768px){
@@ -44,7 +44,7 @@ const RightContainer = styled.div`
   }
 `
 
-const Title = styled.h1`
+export const Title = styled.h1`
   background-image: linear-gradient(-225deg, rgb(255 255 255) 0%, #fffb7c 51%, #ffffff 100%);
   -webkit-background-clip: text;
   color: transparent;
@@ -56,7 +56,7 @@ const Title = styled.h1`
   }
 `
 
-const SubTitle = styled.h3`
+export const SubTitle = styled.h3`
   margin-top: -40px;
   font-size: 2rem;
   & span {
@@ -73,13 +73,13 @@ const SubTitle = styled.h3`
   }
 `
 
-const Img = styled.img`
+export const Img = styled.img`
   width: 80%;
   border-radius: 40%;
   margin:
 `
 
-const ImgIcon = styled.img`
+export const ImgIcon = styled.img`
   width: 45px;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
@@ -89,7 +89,7 @@ const ImgIcon = styled.img`
   }
 `
 
-const Btns = styled.div`
+export const Btns = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -100,7 +100,7 @@ const Btns = styled.div`
   }
 `
 
-const Icon = styled.div`
+export const Icon = styled.div`
   padding: 12px;
   border-radius: 50%;
   border: none;

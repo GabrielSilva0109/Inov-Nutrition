@@ -5,7 +5,7 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
 `
 
 const Text = styled.p`
@@ -20,12 +20,13 @@ const Company = styled.p`
   color: yellow;
 `
 
-const Dev = styled.p`
+const Dev = styled.a`
   font-size: 1rem;
   font-weight: bold;
   color: #ededed;
   cursor: pointer;
   transition: 1s;
+  text-decoration: none;
 
   &:hover{
     color: white;
@@ -37,8 +38,8 @@ const Footer = () => {
         <Container>
           <Text>©CopyRight</Text>
           <Company>Inovi Nutrition</Company>
-          <Dev>@Gabriel Silva</Dev>
-        </Container>    
+          <Dev href='https://gabriel-silva-dev.vercel.app/' target='blank'>@Gabriel Silva</Dev>
+        </Container> 
   )
 }
 
