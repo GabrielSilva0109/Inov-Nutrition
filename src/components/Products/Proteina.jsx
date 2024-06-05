@@ -4,7 +4,7 @@ import Footer from '../Footer/Footer'
 
 import wChoc from '../../Img/Produts/3wChoc.png'
 
-const Container = styled.div`
+export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,7 +16,7 @@ const Container = styled.div`
   }
 `
 
-const Left = styled.div`
+export const Left = styled.div`
     width: 40%;
 
     @media(max-width: 768px){
@@ -24,21 +24,21 @@ const Left = styled.div`
     }
 `
 
-const Right = styled.div`
+export const Right = styled.div`
     width: 40%;
     @media(max-width: 768px){
         width: 80%;
     }
 `
 
-const Title = styled.h1`
+export const Title = styled.h1`
     font-size: 2.5rem;
     background-image: linear-gradient(-225deg, rgb(255 255 255) 0%, #fffb7c 51%, #d1d51e 100%);
     -webkit-background-clip: text;
     color: transparent;
 `
 
-const Text = styled.h3`
+export const Text = styled.h3`
     font-size: 1.1rem;
     text-align: justify;
     color: #dbdbd;
@@ -49,18 +49,18 @@ const Text = styled.h3`
     }
 `
 
-const Img = styled.img`
+export const Img = styled.img`
     width: 70%;
 `
 
-const Flavors = styled.div`
+export const Flavors = styled.div`
     display: flex;
     gap: 10px;
     justify-content: center;
 
 `
 
-const Item = styled.h3`
+export const Item = styled.h3`
     font-size: 1.2rem;
     background-image: linear-gradient(-225deg, rgb(255 238 0) 0%, #fffb7c 51%, #d1d51e 100%);
     -webkit-background-clip: text;
@@ -71,7 +71,7 @@ const Item = styled.h3`
     }
 `
 
-const Separator = styled.div`
+export const Separator = styled.div`
     border: 2px solid #e5e5e58c;
     width: 80%;
     border-radius: 20px;

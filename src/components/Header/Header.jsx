@@ -76,7 +76,6 @@ const MobileMenu = styled.div`
     padding: 15px;
     left: 0;
     width: 100%;
-    background-color: #ffffff42;
     z-index: 10;
     overflow: hidden;
     transition: all 0.4s ease-in-out;
