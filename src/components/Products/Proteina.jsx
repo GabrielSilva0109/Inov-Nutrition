@@ -16,16 +16,15 @@ const Container = styled.div`
 `
 
 const Left = styled.div`
-    width: 50%;
+    width: 40%;
 
     @media(max-width: 768px){
         width: 80%;
-        
     }
 `
 
 const Right = styled.div`
-    width: 50%;
+    width: 40%;
     @media(max-width: 768px){
         width: 80%;
     }
@@ -50,7 +49,21 @@ const Text = styled.h3`
 `
 
 const Img = styled.img`
-    width: 400px;
+    width: 500px;
+`
+
+const Flavors = styled.div`
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+
+`
+
+const Item = styled.h3`
+    font-size: 1.2rem;
+    background-image: linear-gradient(-225deg, rgb(255 238 0) 0%, #fffb7c 51%, #d1d51e 100%);
+    -webkit-background-clip: text;
+    color: transparent;
 `
 
 const Proteina = () => {
@@ -58,8 +71,17 @@ const Proteina = () => {
     <>
     <Container>
       <Left>
-        <Title>Whey 3W</Title>
-        <Text>whey sei la oq </Text>
+        <Title>3Whey</Title>
+        <Text>O 3Whey é uma mistura de três tipos de filtragens de Whey Protein 
+          Whey Concentrado, Isolado, Hidrolisado. è uma proteína de qualidade,
+          fornecendo 22g de Proteína, 6,8g de Glutamina e 5,4g de BCAA por porção.
+        </Text>
+        <Flavors>
+          <Item>Chocolate -</Item>
+          <Item>Baunilha -</Item>
+          <Item>Morango -</Item>
+          <Item>Paçoca</Item>
+        </Flavors>
       </Left>
       <Right>
         <Img src={wChoc}/>
