@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Footer from '../Footer/Footer'
 
 import wChoc from '../../Img/Produts/3wChoc.png'
 
@@ -94,12 +95,22 @@ const Proteina = () => {
       </Right>
 
       <Left>
-        <Title>Whey 3W</Title>
-        <Text>whey sei la oq </Text>
+        <Title>3Whey</Title>
+        <Text>O 3Whey é uma mistura de três tipos de filtragens de Whey Protein 
+          Whey Concentrado, Isolado, Hidrolisado. è uma proteína de qualidade,
+          fornecendo 22g de Proteína, 6,8g de Glutamina e 5,4g de BCAA por porção.
+        </Text>
+        <Flavors>
+          <Item>Chocolate -</Item>
+          <Item>Baunilha -</Item>
+          <Item>Morango -</Item>
+          <Item>Paçoca</Item>
+        </Flavors>
       </Left>
       
       
     </Container>
+    <Footer />
 
     </>
   )
