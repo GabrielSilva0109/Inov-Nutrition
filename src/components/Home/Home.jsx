@@ -116,7 +116,7 @@ const Home = () => {
         <Container>
           <LeftContainer>
             <Title>Inov Nutrition</Title>
-            <SubTitle>Desenvolvendo o futuro da <span>Suplementação</span>, <span>Saude</span> e <span>Bem estar</span>.</SubTitle>
+            <SubTitle>Desenvolvendo o futuro da <span>Suplementação</span>, <span>Saúde</span> e <span>Bem estar</span>.</SubTitle>
             <Btns>
             <Icon as="a" href="https://api.whatsapp.com/send/?phone=5547988027403" target="_blank" rel="noopener noreferrer">
               <ImgIcon src={whats} />

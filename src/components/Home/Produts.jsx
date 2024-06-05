@@ -63,19 +63,19 @@ const Products = () => {
 
   const boxes = [
     { 
-      title: 'Proteinas', 
+      title: 'Proteínas', 
       subtitle: 'Aumente seus músculos', 
       linkText: 'Saiba mais', 
       text: 'As proteínas são essenciais para o crescimento muscular e a recuperação após o exercício. Descubra nossas opções de proteínas de alta qualidade para alcançar seus objetivos de fitness.' 
     },
     { 
-      title: 'Aminoacidos', 
+      title: 'Aminoácidos', 
       subtitle: 'Melhore seu desempenho', 
       linkText: 'Confira agora', 
       text: 'Os aminoácidos são os blocos de construção dos músculos. Descubra nossas opções de aminoácidos essenciais e melhore seu desempenho atlético.' 
     },
     { 
-      title: 'Termogenicos', 
+      title: 'Termogênicos', 
       subtitle: 'Queime gordura mais rápido', 
       linkText: 'Veja nossas opções', 
       text: 'Os termogênicos aumentam a taxa metabólica e ajudam a queimar gordura mais rapidamente. Explore nossa seleção de termogênicos para alcançar seus objetivos de perda de peso.' 
@@ -87,13 +87,13 @@ const Products = () => {
       text: 'As vitaminas desempenham um papel crucial na manutenção da saúde. Conheça nossas opções de vitaminas para fortalecer seu sistema imunológico e melhorar sua saúde geral.' 
     },
     { 
-      title: 'Fitoterapiticos', 
+      title: 'Fitoterápiticos', 
       subtitle: 'Remédios naturais', 
       linkText: 'Conheça nossas opções', 
       text: 'Os fitoterápicos oferecem uma abordagem natural para tratar uma variedade de condições de saúde. Descubra nossas opções de fitoterápicos para uma vida mais saudável.' 
     },
     { 
-      title: 'Colagenos', 
+      title: 'Colágenos', 
       subtitle: 'Pele jovem e saudável', 
       linkText: 'Saiba mais aqui', 
       text: 'O colágeno é essencial para a saúde da pele, cabelos e unhas. Explore nossas opções de colágeno para uma aparência jovem e uma pele saudável.' 

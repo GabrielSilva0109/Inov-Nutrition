@@ -103,7 +103,7 @@ const About = () => {
         <Container>
             <Left>
                 <Title>
-                    Transformando sua Performance e saude.
+                    Transformando sua Performance e saúde.
                 </Title>
                 <Text>Inov Suplementos é mais que uma marca é um compromisso com 
                     a sua excelência pessoal. Nossos produtos são cuidadosamente elaborados para impulsionar sua 
