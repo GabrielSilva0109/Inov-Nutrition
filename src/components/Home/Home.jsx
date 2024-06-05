@@ -118,22 +118,22 @@ const Home = () => {
             <Title>Inov Nutrition</Title>
             <SubTitle>Desenvolvendo o futuro da <span>Suplementação</span>, <span>Saude</span> e <span>Bem estar</span>.</SubTitle>
             <Btns>
-              <Icon>
-                <ImgIcon src={whats}/>
-              </Icon>
-              <Icon>
-                <ImgIcon src={telegram}/>
-              </Icon>
-              <Icon>
-                <ImgIcon src={insta}/>
-              </Icon>
-              <Icon>
-                <ImgIcon src={meta}/>
-              </Icon>
-              <Icon>
-                <ImgIcon src={carrinho}/>
-              </Icon>
-            </Btns>
+            <Icon as="a" href="https://api.whatsapp.com/send/?phone=5547988027403" target="_blank" rel="noopener noreferrer">
+              <ImgIcon src={whats} />
+            </Icon>
+            <Icon as="a" href="https://t.me/your_username" target="_blank" rel="noopener noreferrer">
+              <ImgIcon src={telegram} />
+            </Icon>
+            <Icon as="a" href="https://www.instagram.com/inovnutrition/" target="_blank" rel="noopener noreferrer">
+              <ImgIcon src={insta} />
+            </Icon>
+            <Icon as="a" href="https://www.facebook.com/InovNutrition" target="_blank" rel="noopener noreferrer">
+              <ImgIcon src={meta} />
+            </Icon>
+            <Icon as="a" href="https://www.nossaformaoficial.com.br/linha-inov-nutrition-suplementos?p=1" target="_blank" rel="noopener noreferrer">
+              <ImgIcon src={carrinho} />
+            </Icon>
+          </Btns>
           </LeftContainer>
         </Container>
         <Produts/>
