@@ -50,7 +50,7 @@ const Text = styled.h3`
 `
 
 const Img = styled.img`
-    width: 500px;
+    width: 70%;
 `
 
 const Flavors = styled.div`
@@ -65,6 +65,17 @@ const Item = styled.h3`
     background-image: linear-gradient(-225deg, rgb(255 238 0) 0%, #fffb7c 51%, #d1d51e 100%);
     -webkit-background-clip: text;
     color: transparent;
+
+    @media(max-width: 768px){
+      font-size: 0.9rem;
+    }
+`
+
+const Separator = styled.div`
+    border: 2px solid #e5e5e58c;
+    width: 80%;
+    border-radius: 20px;
+
 `
 
 const Proteina = () => {
@@ -89,10 +100,10 @@ const Proteina = () => {
       </Right>
       
     </Container>
+
+    <Separator />
     <Container>
-      <Right>
-        <Img src={wChoc}/>
-      </Right>
+      
 
       <Left>
         <Title>3Whey</Title>
@@ -107,6 +118,10 @@ const Proteina = () => {
           <Item>Paçoca</Item>
         </Flavors>
       </Left>
+
+      <Right>
+        <Img src={wChoc}/>
+      </Right>
       
       
     </Container>
