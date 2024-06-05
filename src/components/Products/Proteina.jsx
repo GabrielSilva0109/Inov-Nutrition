@@ -8,7 +8,7 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 400px;
+
     @media(max-width: 768px){
       flex-direction: column;
       height: auto;
@@ -18,6 +18,7 @@ export const Container = styled.div`
 
 export const Left = styled.div`
     width: 40%;
+    
 
     @media(max-width: 768px){
         width: 80%;
@@ -75,6 +76,7 @@ export const Separator = styled.div`
     border: 2px solid #e5e5e58c;
     width: 80%;
     border-radius: 20px;
+    margin: 20px;
 
 `
 

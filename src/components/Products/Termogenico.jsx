@@ -1,24 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
-import Header from '../Header/Header'
+import Footer from '../Footer/Footer'
 
-const Container = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 400px;
-`
-
-
+import { Container, Left, Right, Title, Text, Img, Separator, Item, Flavors } from './Proteina'
 
 const Termogenico = () => {
   return (
     <>
         <Container>
-          termo
+          
         </Container>
-        
+        <Footer />
     </>
   )
 }
