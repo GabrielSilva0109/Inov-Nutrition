@@ -5,7 +5,7 @@ import Proteina from './Proteina'
 import Termogenico from './Termogenico'
 import Aminoacidos from './Aminoacido'
 import PreTreino from './PreTreino'
-import Fitoterapticos from './Fitoterapiticos'
+import Vitaminas from './Vitaminas'
 import Colageno from './Colageno'
 
 const Container = styled.div`
@@ -96,10 +96,10 @@ const Products = () => {
                         Pré Treino
                     </NavLink>
                     <NavLink 
-                        onClick={() => handleCategoryClick('Fitoterapticos')}
-                        active={activeCategory === 'Fitoterapticos'}
+                        onClick={() => handleCategoryClick('Vitaminas')}
+                        active={activeCategory === 'Vitaminas'}
                     >
-                        Fitoterápicos
+                        Vitaminas
                     </NavLink>
                     <NavLink 
                         onClick={() => handleCategoryClick('Colageno')}
@@ -108,13 +108,12 @@ const Products = () => {
                         Colágeno
                     </NavLink> 
                 </Nav>
-
                 
                 {activeCategory === 'Proteina' && <Proteina />}
                 {activeCategory === 'Aminoacidos' && <Aminoacidos />}
                 {activeCategory === 'Termogenico' && <Termogenico />}
                 {activeCategory === 'PreTreino' && <PreTreino />}
-                {activeCategory === 'Fitoterapticos' && <Fitoterapticos />}
+                {activeCategory === 'Vitaminas' && <Vitaminas />}
                 {activeCategory === 'Colageno' && <Colageno />} 
             </Container>
         </>

@@ -1,11 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Container, Left, Right, Title, Text, Img, Separator, Item, Flavors } from './Proteina'
+import { Container, Left, Right, Title, Text, Img, Separator, Item, Flavors, Ingredientes, Ingrediente, IngredienteText, Circle } from './Proteina'
 
 import creatina300 from '../../Img/Produts/creatina300.png'
 import Footer from '../Footer/Footer'
 
 const Aminoacido = () => {
+  const ingredientes = [
+    { name: 'Creatina', amount: '3g', percentage: 100 },
+    { name: 'Carboidratos', amount: '0g', percentage: 0 },
+  ]
   return (
     <>
       <Container>
@@ -29,6 +33,16 @@ const Aminoacido = () => {
           <Img src={creatina300}/>
         </Right>
       </Container>
+      <Ingredientes>
+        {ingredientes.map((ingrediente, index) => (
+          <Ingrediente key={index}>
+            <Circle percentage={ingrediente.percentage}>{ingrediente.percentage}%</Circle>
+            <IngredienteText>
+              {ingrediente.name} {ingrediente.amount}
+            </IngredienteText>
+          </Ingrediente>
+        ))}
+      </Ingredientes>
       <Separator />
       
       <Footer/>
