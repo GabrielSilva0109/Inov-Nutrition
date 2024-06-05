@@ -83,6 +83,7 @@ const MobileMenu = styled.div`
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra suave */
     color: white;
     backdrop-filter: blur(5px);
+    background: #a5a5a570;
 `
 
 const MobileNavItem = styled.div`
