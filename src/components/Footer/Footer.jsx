@@ -224,7 +224,7 @@ const Footer = () => {
         </span>
         <span>
           Desenvolvido por{' '}
-          <a href="https://gabriel-silva-dev.vercel.app/" target="_blank" rel="noopener noreferrer">
+          <a href="https://silva-gabriel.vercel.app/" target="_blank" rel="noopener noreferrer">
             @Gabriel Silva
           </a>
         </span>
