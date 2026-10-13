@@ -1,130 +1,130 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Container, Kicker, Secao, TituloSecao } from '../UI/Base'
+import Icone from '../UI/Icone'
+import { diferenciais } from '../../data/marca'
 
-import whey from '../../Img/Icons/whey.png'
-import caps from '../../Img/Icons/caps.png'
-import result from '../../Img/Icons/result.png'
-import flavor from '../../Img/Icons/flavor.png'
-import money from '../../Img/Icons/money.png'
-import burn from '../../Img/Icons/burn.png'
+const Grade = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+  gap: 20px;
+  margin: clamp(32px, 5vw, 56px) 0 0;
+  padding: 0;
+  list-style: none;
+`
 
-const Section = styled.div`
+const Topico = styled.li`
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 32px 28px 30px;
+  border-radius: var(--raio);
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  box-shadow: var(--sombra-1);
+  transition:
+    transform var(--medio) var(--ease-out),
+    box-shadow var(--medio) var(--ease-out);
+
+  /* barra azul inclinada que se enche no topo */
+  &::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 0;
+    height: 6px;
+    width: calc(100% + 20px);
+    background: linear-gradient(90deg, var(--azul), var(--azul-vivo));
+    transform: scaleX(0.18) skewX(var(--inclinacao));
+    transform-origin: 0 50%;
+    transition: transform 600ms var(--ease-out);
+  }
+
+  .cabeca {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-`
+    justify-content: space-between;
+  }
 
-const Title = styled.h1`
-    font-size: 1rem;
-    color: #ffff59;
+  .icone {
+    display: grid;
+    place-items: center;
+    width: 58px;
+    height: 58px;
+    border-radius: 16px;
+    background: var(--azul);
+    color: var(--branco);
+    box-shadow: 0 10px 24px -10px rgba(11, 84, 166, 0.8);
+    transition: transform 500ms var(--ease-pop);
+  }
 
-    @media(max-width: 768px){
-        font-size: 1.3rem;
+  .numero {
+    font-family: var(--fonte-display);
+    font-style: italic;
+    font-weight: 900;
+    font-size: 3rem;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--borda-forte);
+  }
+
+  h3 {
+    font-size: 1.75rem;
+    font-style: italic;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  p {
+    color: var(--texto-2);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--sombra-2);
     }
-`
-
-const Text = styled.h3`
-    font-size: 0.75rem;
-    text-align: justify;
-    color: white;
-    @media(max-width: 768px){
-        font-size: 0.8rem;
+    &:hover::before {
+      transform: scaleX(1) skewX(var(--inclinacao));
     }
-`
-
-const Img = styled.img`
-    width: 40px;
-`
-
-const Topicos = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-    width: 70%;
-    gap: 10px;
-
-    @media(max-width: 768px){
-        flex-direction: column;
-        width: 100%;
-        gap: 5px;
+    &:hover .icone {
+      transform: rotate(-10deg) scale(1.1);
     }
-`
-
-const Topico = styled.div`
-    width: 30%;
-    height: 250px;
-    border-radius: 20px;
-    margin: 10px;
-    padding: 10px;
-    box-shadow: inset 0px 0px 10px 0px rgba(255,255,255,0.75); 
-
-    @media(max-width: 768px){
-        width: 80%;
-        height: 270px;
-    }
+  }
 `
 
 const Topics = () => {
   return (
-    <>
-    <Section>
-            <Topicos>
+    <Secao $tom="suave">
+      <Container>
+        <div data-reveal="up">
+          <Kicker>Por que Inov</Kicker>
+          <TituloSecao>
+            Seis motivos pra <em>treinar</em> com a gente
+          </TituloSecao>
+        </div>
 
-                <Topico>
-                    <Img src={caps}/>
-                    <Title>Pureza e qualidade em cada cápsula</Title>
-                    <Text>Cada cápsula é uma promessa de qualidade e pureza, garantindo
-                         uma experiência de suplementação confiável e eficaz. Com os mais 
-                         altos padrões de controle de qualidade, oferecemos produtos que
-                          impulsionam sua jornada de bem-estar.</Text>
-                </Topico>
-
-                <Topico>
-                    <Img src={result}/>
-                    <Title>Inovação para resultados excepcionais</Title>
-                    <Text>Nossa constante pesquisa e inovação resultam em produtos que
-                         superam as expectativas, oferecendo os últimos avanços em nutrição
-                          esportiva. Com nossa inovação, você alcança resultados excepcionais
-                           rapidamente</Text>
-                </Topico>
-
-                <Topico>
-                    <Img src={whey}/>
-                    <Title>Excelência com matéria-prima de ponta</Title>
-                    <Text>Do início ao fim, nossa dedicação à excelência começa com a seleção
-                         cuidadosa das melhores matérias-primas.  Com ingredientes de ponta e 
-                         processos de fabricação avançados, garantimos qualidade em cada dose.</Text>
-                </Topico>
-            </Topicos>
-            <Topicos>
-                <Topico>
-                    <Img src={flavor}/>
-                    <Title>Sabores irresistíveis</Title>
-                    <Text>Descubra uma variedade de sabores irresistíveis que satisfazem 
-                        até os paladares mais exigentes. De doce a cítrico, de frutado a cremoso, 
-                        nossos suplementos oferecem uma ampla gama de opções para atender aos gostos
-                        de todos, garantindo uma experiência agradável e personalizada</Text>
-                </Topico>
-
-                <Topico>
-                    <Img src={money}/>
-                    <Title>Qualidade premium a um preço acessível</Title>
-                    <Text>Nossa missão é oferecer qualidade extrema com os melhores ingredientes 
-                        e pelo melhor preço. Priorizamos a acessibilidade sem comprometer a qualidade,
-                         para que todos possam desfrutar dos benefícios de uma vida mais saudável</Text>
-                </Topico>
-
-                <Topico>
-                    <Img src={burn}/>
-                    <Title>Suplementos Potentes para Emagrecimento</Title>
-                    <Text>Alcance seus objetivos de peso com nossos suplementos potentes,
-                         formulados para impulsionar o metabolismo e queimar gordura de forma eficaz.</Text>
-                </Topico>
-            </Topicos>
-    </Section>
-    </>
+        <Grade>
+          {diferenciais.map((d, i) => (
+            <Topico key={d.titulo} data-reveal="up" style={{ '--d': i }}>
+              <div className="cabeca">
+                <span className="icone" aria-hidden="true">
+                  <Icone nome={d.icone} tamanho={28} />
+                </span>
+                <span className="numero" aria-hidden="true">
+                  0{i + 1}
+                </span>
+              </div>
+              <h3>{d.titulo}</h3>
+              <p>{d.texto}</p>
+            </Topico>
+          ))}
+        </Grade>
+      </Container>
+    </Secao>
   )
 }
 
